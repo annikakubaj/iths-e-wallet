@@ -38,7 +38,7 @@ justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 0.5rem;
     border-radius: 10px;
     width: 400px;
-    background-color: #d8d8d8;
+    background: #d8d8d8;
     
  
 }  

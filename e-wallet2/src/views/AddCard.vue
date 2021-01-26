@@ -16,7 +16,10 @@ components: {
   Top: Top,
   Card: Card,
   CardForm: CardForm
+},
+
+
 }
-}
+
 
 </script>
