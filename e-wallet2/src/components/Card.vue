@@ -1,17 +1,20 @@
 <template>
-    <section class= "card"> 
-        <p class="card-number">CARD NUMBER</p>
-        <p class="expiry-date">Expiry date</p>
-        <p class="valid p-small">Valid until</p>
-        <p class="card-name p-small"> Cardholders Name</p>
-        <p class="input-name">inputted name</p>
-        
+<main class="wrapper">
+    <section class="card">
+        <div class="chip"> <img src="../assets/chip-dark.svg"/></div>
+        <div class="bitcoin"> <img src="../assets/vendor-bitcoin.svg"/></div>
+    <div class= "card-number"> Card number </div>
+    <div class="card-holder p-small"> CARDHOLDER NAME </div>
+    <div class="firstname"> Firstname</div>
+    <div class="surname"> Surname</div>
+    <div class="valid p-small">VALID THRU</div>
+    <div class="date">mm/YY</div>
+    
     </section>
-    
-    
 
-
-</template>
+    </main>
+    
+    </template>
 
 <script>
 export default {
@@ -21,43 +24,43 @@ export default {
 
 <style scoped>
 
+.wrapper {
+display: flex;
+width: 100%;
+justify-content: center;
+}
+
 .card {
-  width: 25%;
-  height: 220px;
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 0.5rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr ;
-  grid-template-rows: 1fr 1fr;
-  margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    height: 220px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 0.5rem;
+    border-radius: 10px;
+    width: 400px;
+    background-color: #d8d8d8;
+    
+ 
 }  
 
 .card-number {
-    grid-row: 2;
-    grid-column: 1/3;
-    font-size: 1.7rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.8rem;
+    grid-column: 2/4;
+    grid-row: 3;
+font-size: 1.7rem;
+
 }
+  
 
 p {
   font-size: 1.1rem;
   font-family: "PT Mono", monospace;
 }
 
-.expiry-date {
-    grid-row: 4;
-    grid-column: 2;
-    align-self: end;
-    justify-self: end;
-}
-
-.expiry-date {
-justify-self: end;
-}
 
 .valid {
+    grid-column: 4;
+    grid-row: 4;
+  
 
 }
 
@@ -65,6 +68,43 @@ justify-self: end;
     font-size: 0.7rem;
 }
 
+.card-holder {
+    grid-column: 1/3;
+    grid-row: 4;
+    margin-top: 9px;
+    margin-right: 15px;
+
+
+}
+
+.firstname {
+    grid-column: 1;
+    grid-row: 5;
+
+}
+
+.surname {
+    grid-column: 2;
+    grid-row: 5;
+
+}
+
+.date {
+    grid-column: 4;
+    grid-row: 5;
+
+}
+
+.chip {
+
+}
+
+.bitcoin {
+    grid-column: 4;
+    margin-top: 15px;
+    
+    
+}
 
 
 </style>
