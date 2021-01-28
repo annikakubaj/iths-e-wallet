@@ -1,6 +1,7 @@
 <template>
 <main class="wrapper">
-    <section class="card">
+    
+    <section class="card" :class="newCard.vendor">
         <div class="chip"> <img src="../assets/chip-dark.svg"/></div>
         <!-- <div class="bitcoin"> <img src="../assets/vendor-bitcoin.svg"/></div> -->
         <section class="vendor">
@@ -107,12 +108,26 @@ p {
 
 }
 
-.chip {
-}
+
 
 .vendor {
     grid-column: 4;
     margin-top: 10px;
+}
+
+.vendor-bitcoin {
+    background-color: #FFD700;
+}
+
+.vendor-evil {
+ background-color: #FF1493;   
+}
+.vendor-blockchain {
+background-color: #9932CC;
+}
+
+.vendor-ninja {
+    background-color: #585454;
 }
 
 
