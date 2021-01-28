@@ -11,7 +11,7 @@ new Vue({
         {
           name: "Annika",
           number: "123244555",
-          date: "12/2",
+          month: "12/2",
           vendor: ""
         }
       ],

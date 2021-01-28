@@ -17,7 +17,8 @@
     <div class="card-holder p-small"> CARDHOLDER NAME </div>
     <div class="name"> {{ newCard.name }}</div>
     <div class="valid p-small">VALID THRU</div>
-    <div class="date">{{ newCard.date }}</div>
+    <div class="month">{{ newCard.month }}</div>
+    <div class="year"> {{ newCard.year }} </div>
     
     </section>
 
@@ -102,10 +103,21 @@ p {
 
 }
 
-.date {
+.month {
     grid-column: 4;
     grid-row: 5;
+    margin-right: 50px;
 
+    
+
+}
+
+.year {
+    grid-column: 3/5;
+    grid-row: 5;
+   margin-left: 120px;
+   justify-content: flex-end;
+  
 }
 
 
@@ -129,6 +141,8 @@ background-color: #9932CC;
 .vendor-ninja {
     background-color: #585454;
 }
+
+
 
 
 </style>
