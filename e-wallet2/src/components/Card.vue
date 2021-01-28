@@ -3,10 +3,10 @@
     <section class="card">
         <div class="chip"> <img src="../assets/chip-dark.svg"/></div>
         <div class="bitcoin"> <img src="../assets/vendor-bitcoin.svg"/></div>
-    <div class= "card-number"> Card number </div>
+    <div class= "card-number"> {{ newCard.number }} </div>
     <div class="card-holder p-small"> CARDHOLDER NAME </div>
-    <div class="firstname"> Firstname</div>
-    <div class="surname"> Surname</div>
+    <div class="firstname p-small"> Firstname</div>
+    <div class="surname p-small"> Surname</div>
     <div class="valid p-small">VALID THRU</div>
     <div class="date">mm/YY</div>
     
@@ -17,7 +17,11 @@
     </template>
 
 <script>
+
 export default {
+    props: {
+        newCard: Object
+    }
     
 }
 </script>
@@ -69,10 +73,8 @@ p {
 }
 
 .card-holder {
-    grid-column: 1/3;
+    grid-column: 1;
     grid-row: 4;
-    margin-top: 9px;
-    margin-right: 15px;
 
 
 }
@@ -96,14 +98,11 @@ p {
 }
 
 .chip {
-
 }
 
 .bitcoin {
     grid-column: 4;
-    margin-top: 15px;
-    
-    
+    margin-top: 10px;
 }
 
 
