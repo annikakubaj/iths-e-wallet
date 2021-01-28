@@ -2,7 +2,16 @@
 <main class="wrapper">
     <section class="card">
         <div class="chip"> <img src="../assets/chip-dark.svg"/></div>
-        <div class="bitcoin"> <img src="../assets/vendor-bitcoin.svg"/></div>
+        <!-- <div class="bitcoin"> <img src="../assets/vendor-bitcoin.svg"/></div> -->
+        <section class="vendor">
+            <img v-if="newCard.vendor ==='vendor-bitcoin'" src="../assets/vendor-bitcoin.svg">
+            <img v-else-if="newCard.vendor === 'vendor-evil'" src="../assets/vendor-evil.svg">
+            <img v-else-if="newCard.vendor === 'vendor-blockchain'" src="../assets/vendor-blockchain.svg">
+            <img v-else-if="newCard.vendor === 'vendor-ninja'" src="../assets/vendor-ninja.svg">
+
+            </section>
+
+
     <div class= "card-number"> {{ newCard.number }} </div>
     <div class="card-holder p-small"> CARDHOLDER NAME </div>
     <div class="name"> {{ newCard.name }}</div>
@@ -10,6 +19,8 @@
     <div class="date">{{ newCard.date }}</div>
     
     </section>
+
+
 
     </main>
     
@@ -99,7 +110,7 @@ p {
 .chip {
 }
 
-.bitcoin {
+.vendor {
     grid-column: 4;
     margin-top: 10px;
 }
