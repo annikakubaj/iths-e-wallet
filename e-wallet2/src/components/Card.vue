@@ -5,10 +5,9 @@
         <div class="bitcoin"> <img src="../assets/vendor-bitcoin.svg"/></div>
     <div class= "card-number"> {{ newCard.number }} </div>
     <div class="card-holder p-small"> CARDHOLDER NAME </div>
-    <div class="firstname p-small"> Firstname</div>
-    <div class="surname p-small"> Surname</div>
+    <div class="name"> {{ newCard.name }}</div>
     <div class="valid p-small">VALID THRU</div>
-    <div class="date">mm/YY</div>
+    <div class="date">{{ newCard.date }}</div>
     
     </section>
 
@@ -79,7 +78,7 @@ p {
 
 }
 
-.firstname {
+.name {
     grid-column: 1;
     grid-row: 5;
 

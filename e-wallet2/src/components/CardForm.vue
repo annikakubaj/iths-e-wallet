@@ -3,9 +3,10 @@
 <card :newCard="newCard"/>
 <form @submit.prevent="addThisCard">
 
-    <label for="card-number"> Card number</label>
+    <label for="card-number"> CARD NUMBER</label>
     <input
     name="cardnumber"
+    maxlength="16"
     type="text"
     v-model="newCard.number"
     />
@@ -15,7 +16,23 @@
          id="input-name" 
          class="cardform"
          type="text" 
-         v-model="newCard.name">
+         v-model="newCard.name" />
+
+         <label for="date"> VALID THRU </label>
+         <input
+         id="date"
+         type="text"
+         v-model="newCard.date"/>
+
+         <label for="vendor"> VENDOR </label>
+         <select name="vendor" v-model="newCard.vendor">
+             <option value="vendor-bitcoin">Bitcoin Inc</option>
+             <option value="vendor-blockchain">Blockchain Inc</option>
+             <option value="vendor-evil">Evil Corp</option>
+             <option value="vendor-ninja"> Ninja Bank</option>
+             </select>
+
+
         
         <button class="btnAdd">Add Card</button>
 
@@ -38,7 +55,9 @@ export default {
         return {
             newCard: {
                 number: "",
-                name: ""
+                name: "",
+                date: "",
+                vendor: ""
             }
         }
     },

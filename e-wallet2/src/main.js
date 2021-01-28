@@ -10,7 +10,9 @@ new Vue({
       cards: [
         {
           name: "Annika",
-          number: "123244555"
+          number: "123244555",
+          date: "12/2",
+          vendor: ""
         }
       ],
     
