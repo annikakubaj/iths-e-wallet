@@ -91,6 +91,7 @@ export default {
     data () {
         return {
             newCard: {
+                id: "",
                 number: "",
                 name: "",
                 month: "",
@@ -102,6 +103,7 @@ export default {
 
 methods: {
 addThisCard() {
+    this.newCard.id = Date.now().toString()
     this.$root.$data.cards.push(this.newCard)
 }
 }
