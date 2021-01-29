@@ -5,10 +5,10 @@
 
     <section class="card-stack">
         <Card 
-        v-for="card of cards"
+        v-for="card of cardStack"
         :key="card.id"
-        :card="card"
-        @newCard="newCard"
+        :newCard="card"
+        
         />
 
     </section>

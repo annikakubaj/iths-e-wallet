@@ -7,8 +7,10 @@ Vue.config.productionTip = false;
 new Vue({
   data (){
     return {
-      cards: [
+      activeCardIndex: 0
+      ,cards: [
         {
+          id: 1,
           name: "Annika",
           number: "123244555",
           month: "12/2",
