@@ -36,4 +36,11 @@ export default {
 
 <style scoped>
 
+.card-stack {
+    position: sticky;
+    display: grid;
+    grid-auto-rows: 100px;
+    margin-bottom: 10rem;
+}
+
 </style>

@@ -5,6 +5,7 @@
       hej
     </p>
    <CardStack />
+   <button v-on:click= "addCardRoute"> ADD NEW CARD </button>
   </div>
 </template>
 
@@ -19,6 +20,14 @@ export default {
     Card,
     CardStack
   },
+
+  methods: {
+    addCardRoute(){
+      this.$router.push("/AddCard");
+    }
+
+  },
+
   computed: {
 
     activeCard: function(){
