@@ -1,4 +1,5 @@
 <template>
+
   <div class="home">
       <Card :newCard="activeCard" />
     <p>
@@ -37,3 +38,17 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+button {
+   justify-content: center;
+    align-self: center;
+    width: 200px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    margin-top: 8px;
+    border-radius: 10px;
+}
+
+</style>

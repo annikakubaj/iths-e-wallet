@@ -11,10 +11,10 @@ new Vue({
       ,cards: [
         {
           id: 1,
-          name:"NAME",
-          number: "XXXXXXX",
-          month: "00",
-          year: "0000",
+          name:"Annika K",
+          number: "XXX XXX XXX",
+          month: "02",
+          year: "2021",
           vendor: "",
         }
       ],

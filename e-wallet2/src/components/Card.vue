@@ -132,14 +132,17 @@ p {
 }
 
 .vendor-evil {
- background-color: #FF1493;   
+ background-color:#ff6ead;   
+ color: #e3e1e3;
 }
 .vendor-blockchain {
-background-color: #9932CC;
+background-color: #c93cc2;
+color: #e3e1e3;
 }
 
 .vendor-ninja {
-    background-color: #585454;
+    background-color: #575557;
+    color: #e3e1e3;
 }
 
 

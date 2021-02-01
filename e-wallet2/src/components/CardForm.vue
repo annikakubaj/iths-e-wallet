@@ -70,7 +70,7 @@
 
 
         
-        <button class="btnAdd">Add Card</button>
+        <button class="btnAdd">Add This Card</button>
 
         </form>
         </div> 
@@ -122,9 +122,15 @@ form {
 } 
 
 .btnAdd {
-    width: 400px;
+    justify-content: center;
+    align-self: center;
+    width: 200px;
+    height: 40px;
     background-color: black;
     color: white;
+    margin-top: 8px;
+    border-radius: 10px;
+    
 }
 
 
@@ -134,4 +140,22 @@ form {
     flex-direction: column;
 }
 
+label {
+  font-family: "PT Mono", monospace;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
+
+input {
+    padding: 0.9rem;
+    border-radius: 5px;
+
+}
+
+select {
+    padding: 3px;
+    margin: 3px;
+     border-radius: 5px;
+}
 </style>
