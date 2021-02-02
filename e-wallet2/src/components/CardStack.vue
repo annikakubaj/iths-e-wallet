@@ -4,12 +4,10 @@
     <p> YOUR WALLET </p>
 
     <section class="card-stack">
-        <Card 
-        v-for="card of cardStack"
-        :key="card.id"
-        :newCard="card"
-        
-        />
+        <div v-for="(card, index) of cardStack"
+        :key="card.id" @click="onClick(index)">
+        <Card :newCard="card" />
+        </div>
 
     </section>
     </section>
@@ -24,11 +22,16 @@ export default {
         cardStack() {
             return this.$root.$data.cards
         }
+    
     },
     
     methods: {
         newCard(id) {
             this.$root.newCard(id)
+        }
+        ,onClick(index) {
+            
+            this.$root.$data.activeCardIndex = index;
         }
     }
 }
