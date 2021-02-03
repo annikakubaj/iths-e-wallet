@@ -1,7 +1,9 @@
 <template>
 <main class="wrapper">
     
-    <section class="card" :class="newCard.vendor">
+     <section v-if="newCard==null"></section>
+    
+    <section v-else class="card" :class="newCard.vendor">
         <div class="chip"> <img src="../assets/chip-dark.svg"/></div>
         <!-- <div class="bitcoin"> <img src="../assets/vendor-bitcoin.svg"/></div> -->
         <section class="vendor">

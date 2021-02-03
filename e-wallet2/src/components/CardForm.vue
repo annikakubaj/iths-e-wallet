@@ -126,10 +126,11 @@ form {
     align-self: center;
     width: 200px;
     height: 40px;
-    background-color: black;
+    background-color: #635b5e;
     color: white;
     margin-top: 8px;
     border-radius: 10px;
+    font-family: "PT Mono", monospace;
     
 }
 

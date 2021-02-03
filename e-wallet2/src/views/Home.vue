@@ -27,7 +27,7 @@ export default {
       this.$router.push("/AddCard");
     },
     removeCard () {
-      this.$root.$data.cards.splice(this.$root.$data.activeCardIndex, this.$root.$data.activeCardIndex);
+       this.$root.$data.cards.splice(this.$root.$data.activeCardIndex, 1);
       
     }
   
@@ -38,10 +38,14 @@ export default {
 
     activeCard: function(){
 
-      return this.$root.$data.cards[this.$root.$data.activeCardIndex];
-    }
+      if(this.$root.$data.cards.lenght!=0){
+       return this.$root.$data.cards[this.$root.$data.activeCardIndex];
+      }
+      else{
+        return null;
+      }}
   }
-};
+      };
 </script>
 
 <style scoped>
@@ -50,10 +54,11 @@ button {
     align-self: center;
     width: 200px;
     height: 40px;
-    background-color: black;
     color: white;
-    margin-top: 8px;
+    margin-top: 15px;
     border-radius: 10px;
+    font-family: "PT Mono", monospace;
+    background-color: #635b5e;
 }
 
 p {
