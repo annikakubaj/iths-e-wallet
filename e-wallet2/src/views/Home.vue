@@ -27,8 +27,12 @@ export default {
       this.$router.push("/AddCard");
     },
     removeCard () {
+      let confirmation = window.confirm("Are you sure you want to delete this card permanently?");
+      if (confirmation === true) {
+
        this.$root.$data.cards.splice(this.$root.$data.activeCardIndex, 1);
       
+    }
     }
   
 
@@ -60,6 +64,12 @@ button {
     font-family: "PT Mono", monospace;
     background-color: #635b5e;
 }
+
+button:hover {
+  background: #ff9f45;
+  color: black;
+}
+
 
 p {
   font-family: "PT Mono", monospace;

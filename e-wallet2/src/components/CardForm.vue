@@ -126,8 +126,8 @@ form {
     align-self: center;
     width: 200px;
     height: 40px;
-    background-color: #635b5e;
-    color: white;
+    background-color:#ff9f45;
+    color:black;
     margin-top: 8px;
     border-radius: 10px;
     font-family: "PT Mono", monospace;
