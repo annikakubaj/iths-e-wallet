@@ -1,10 +1,10 @@
 <template>
 
   <div class="home">
+    <p> Active Card </p>
       <Card :newCard="activeCard" />
-    <p>
-      hej
-    </p>
+      <button v-on:click="removeCard"> Remove Card </button>
+   
    <CardStack />
    <button v-on:click= "addCardRoute"> ADD NEW CARD </button>
   </div>
@@ -25,7 +25,12 @@ export default {
   methods: {
     addCardRoute(){
       this.$router.push("/AddCard");
+    },
+    removeCard () {
+      this.$root.$data.cards.splice(this.$root.$data.activeCardIndex, this.$root.$data.activeCardIndex);
+      
     }
+  
 
   },
 
@@ -49,6 +54,15 @@ button {
     color: white;
     margin-top: 8px;
     border-radius: 10px;
+}
+
+p {
+  font-family: "PT Mono", monospace;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 700;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: .5rem;
 }
 
 </style>

@@ -1,7 +1,7 @@
 <template>
 <section>
 
-    <p> YOUR WALLET </p>
+    <h1> YOUR WALLET </h1>
 
     <section class="card-stack">
         <div v-for="(card, index) of cardStack"
@@ -24,7 +24,7 @@ export default {
         }
     
     },
-    
+     
     methods: {
         newCard(id) {
             this.$root.newCard(id)
@@ -44,6 +44,12 @@ export default {
     display: grid;
     grid-auto-rows: 100px;
     margin-bottom: 10rem;
+}
+
+h1 {
+    font-family: "PT Mono", monospace;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 700;
 }
 
 </style>
