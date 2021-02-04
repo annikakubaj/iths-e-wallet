@@ -8,9 +8,11 @@
     <input
     name="cardnumber"
     placeholder="XXXX XXXX XXXX XXXX"
+    v-mask="'#### #### #### ####'"
     maxlength="16"
     type="text"
     v-model="newCard.number"
+    required
     />
     
         <label for="input-name"> CARDHOLDER NAME </label>
@@ -19,14 +21,16 @@
          placeholder="FIRSTNAME LASTNAME" 
          class="cardform"
          type="text" 
-         v-model="newCard.name" />
+         v-model="newCard.name" 
+         required/>
 
          <div class="valid-date">
          <label for="month"> Month </label>
          <select
          id="month"
          type="text"
-         v-model="newCard.month">
+         v-model="newCard.month"
+         required>
 
          <option value=""></option>
           <option value="01">January</option>
@@ -60,13 +64,14 @@
         </select>
         </div>
 
-         <label for="vendor"> VENDOR </label>
+         <label for="vendor"> VENDOR 
+         </label>
          <select name="vendor" v-model="newCard.vendor">
              <option value="vendor-bitcoin">Bitcoin Inc</option>
              <option value="vendor-blockchain">Blockchain Inc</option>
              <option value="vendor-evil">Evil Corp</option>
              <option value="vendor-ninja"> Ninja Bank</option>
-             </select>
+            </select>
 
 
         
