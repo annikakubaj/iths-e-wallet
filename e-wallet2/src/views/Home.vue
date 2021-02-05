@@ -2,8 +2,13 @@
 
   <div class="home">
     <p> Active Card </p>
+    <section v-if ="activeCard==null">
+      <p> Select a card from your wallet </p>
+      </section>
+      <section v-else>
       <Card :newCard="activeCard" />
       <button v-on:click="removeCard"> Remove Card </button>
+      </section>
    
    <CardStack />
    <button v-on:click= "addCardRoute"> ADD NEW CARD </button>
@@ -31,6 +36,7 @@ export default {
       if (confirmation === true) {
 
        this.$root.$data.cards.splice(this.$root.$data.activeCardIndex, 1);
+       this.$root.$data.activeCardIndex = -1;
       
     }
     }
